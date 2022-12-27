@@ -19,8 +19,14 @@ Aşağıdakileri yapın:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
+let surucuYasi = 26;
+if(surucuYasi>18){
+  console.log("true")
 
-
+}
+else {
+  console.log("false")
+}
 
 /*
 Görev 1b - Değerler (puanlamaya dahil değildir)
@@ -34,8 +40,13 @@ Aşağıdakileri yapınız:
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
 
+let degisken1 = 2
+let degisken2 =4
+if (degisken1 < degisken2){
 
-
+  degisken1 = 10
+}
+console.log(degisken1);
 
 
 /*
@@ -48,7 +59,9 @@ Aşağıdakileri yapın:
 
    İPUCU: Number metoduna bakabilirsin
 */
-
+let dogum_yili = 1999;
+dogum_yili = Number(dogum_yili);
+console.log(dogum_yili);
 
 
 
@@ -61,10 +74,10 @@ Aşağıdakileri yapın:
    3. a ve b'yi çarpıp, sonucu dönün
 */
 
-function carpma(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function carpma(a,b) {
+  return a * b ;
 }
-
+console.log(carpma(6,7));
 
 
 
@@ -76,10 +89,11 @@ Aşağıdakileri yapın:
  2. Gelen değeri kullanarak köpeğin yaşını hesaplayın (insanlarda 1 yıl köpeklerde 7 yıla denk gelir)
  3. Hesaplanan köpeğin yaşını dönün.
  */
-
-function kopeginYasi(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+let yas = 8
+function kopeginYasi(yas){
+  return yas * 7;
 }
+console.log(kopeginYasi(yas));
 
 
 
@@ -105,7 +119,7 @@ OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı ye
 */
 
 function oyun(oyuncu, bilgisayar){
-  /*buraya kodunu yazabilirsin*/
+  
 }
 
 
@@ -119,10 +133,11 @@ Aşağdakileri milDonusturucu fonksiyonunu kullanarak yapın:
 2. Aldığınız bu değeri Mil'e dönüştürün
 3. Mil değerini geri dönün
 */
-
-function milDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+let km = 80
+function milDonusturucu(km){
+  return km * 0.621371192;
 }
+console.log(milDonusturucu(km));
 
 
 
@@ -133,10 +148,11 @@ Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yapın:
 2. Aldığınız bu değeri feet'e dönüştürün
 3. feet değerini geri dönün
 */
-
-function feetDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+let cm = 250
+function feetDonusturucu(cm){
+  return cm / 30.48;
 }
+console.log(feetDonusturucu(cm));
 
 
 
@@ -172,12 +188,26 @@ Aşağdakileri notHesapla fonksiyonunda yapın.
  daha aşağıda 'F aldın'
  dönün
 */
+let sinav_sonucu = 85
+function notHesapla(sinav_sonucu)
+{ 
 
-function notHesapla(/*buraya kodunu yazabilirsin*/){
-/*buraya kodunu yazabilirsin*/
+  if (sinav_sonucu <=100 && sinav_sonucu >= 90)  {
+    return 'A aldin'; }
+  else if (sinav_sonucu <=89 && sinav_sonucu >= 80 ) { 
+     return 'B aldin' ;
+  }
+  
+   else if (sinav_sonucu <=79 && sinav_sonucu >= 70 ) {
+    return 'C aldin';} 
+  else if (sinav_sonucu<=69 && sinav_sonucu >= 60){
+    return 'D aldin';
+  }
+  else { return 'F aldin'}
+  
 }
 
-
+console.log(sinav_sonucu);
 
 /* Bonus Çalışma: Sesli harf sayacı - Kaç tane sesli harf var? */
 
@@ -214,3 +244,4 @@ module.exports = {
   cocukSarkisi,
   notHesapla
 }
+
