@@ -21,11 +21,11 @@ Aşağıdakileri yapın:
 */
 let surucuYasi = 26;
 if(surucuYasi>18){
-  console.log("true")
+  console.log("true");
 
 }
 else {
-  console.log("false")
+  console.log("false");
 }
 
 /*
@@ -44,7 +44,7 @@ let degisken1 = 2
 let degisken2 =4
 if (degisken1 < degisken2){
 
-  degisken1 = 10
+  degisken1 = 10 ;
 }
 console.log(degisken1);
 
@@ -77,7 +77,7 @@ Aşağıdakileri yapın:
 function carpma(a,b) {
   return a * b ;
 }
-console.log(carpma(6,7));
+console.log(carpma(5,7));
 
 
 
@@ -89,9 +89,9 @@ Aşağıdakileri yapın:
  2. Gelen değeri kullanarak köpeğin yaşını hesaplayın (insanlarda 1 yıl köpeklerde 7 yıla denk gelir)
  3. Hesaplanan köpeğin yaşını dönün.
  */
-let yas = 8
+let yas = 5
 function kopeginYasi(yas){
-  return yas * 7;
+  return yas * 7 ;
 }
 console.log(kopeginYasi(yas));
 
@@ -119,9 +119,20 @@ OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı ye
 */
 
 function oyun(oyuncu, bilgisayar){
-  
+  /*buraya kodunu yazabilirsin*/
+  if ((oyuncu==="Makas"&&bilgisayar==="Kağıt")
+  || (oyuncu==="Kağıt"&&bilgisayar==="Taş")
+  ||(oyuncu==="Taş"&&bilgisayar==="Makas")){
+  return"Kazandın!"
+  }
+  else if (oyuncu===bilgisayar){
+    return"Beraberlik"
+  }
+  else{
+    return"Kaybettin!"
+  }
 }
-
+console.log(oyun("Taş","Kağıt"));
 
 
 /* Görev 4 : Metrik Dönüştürücü */
@@ -135,7 +146,7 @@ Aşağdakileri milDonusturucu fonksiyonunu kullanarak yapın:
 */
 let km = 80
 function milDonusturucu(km){
-  return km * 0.621371192;
+  return km * 0.621371 ;
 }
 console.log(milDonusturucu(km));
 
@@ -169,11 +180,13 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yapın:
 4. Bu döngüde, her seferinde cocukSarkisi fonsiyonu çalışsın ve console.log'a dönen metni yazdırsın.
 */
 
-function cocukSarkisi(/*buraya kodunu yazabilirsin*/){
-      /*buraya kodunu yazabilirsin*/
+function cocukSarkisi(sayi){
+let metin = sayi  +  " küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!"
+return metin;
+
 }
 
-
+console.log(cocukSarkisi(5));
 /* Görev 6 : Not Hesaplayıcı */
 
 /*
@@ -192,22 +205,22 @@ let sinav_sonucu = 85
 function notHesapla(sinav_sonucu)
 { 
 
-  if (sinav_sonucu <=100 && sinav_sonucu >= 90)  {
-    return 'A aldin'; }
-  else if (sinav_sonucu <=89 && sinav_sonucu >= 80 ) { 
-     return 'B aldin' ;
+  if (sinav_sonucu >= 90)  {
+    return 'A aldın'; }
+  else if (sinav_sonucu >= 80 ) { 
+     return 'B aldın' ;
   }
   
-   else if (sinav_sonucu <=79 && sinav_sonucu >= 70 ) {
-    return 'C aldin';} 
-  else if (sinav_sonucu<=69 && sinav_sonucu >= 60){
-    return 'D aldin';
+   else if (sinav_sonucu >= 70 ) {
+    return 'C aldın';} 
+  else if (sinav_sonucu >= 60){
+    return 'D aldın';
   }
-  else { return 'F aldin'}
+  else { return 'F aldın'; }
   
 }
 
-console.log(sinav_sonucu);
+console.log(notHesapla(sinav_sonucu));
 
 /* Bonus Çalışma: Sesli harf sayacı - Kaç tane sesli harf var? */
 
